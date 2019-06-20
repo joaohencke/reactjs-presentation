@@ -7,18 +7,18 @@ function CounterContainer() {
   const increment = () => setCounter(counter + 1);
 
   useEffect(() => {
-      console.log('counter renderizado')
-      return () => {
-          console.log('counter desmontado');
-      }
+    console.log("counter renderizado");
+    return () => {
+      console.log("counter desmontado");
+    };
   }, [counter]);
 
   useEffect(() => {
-    console.log('componente renderizado');
+    console.log("componente renderizado");
     return () => {
-        console.log('componente desmontado');
-    }
-  }, [])
+      console.log("componente desmontado");
+    };
+  }, []);
 
   return (
     <section>
