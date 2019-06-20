@@ -1,23 +1,20 @@
 import React, { useState } from "react";
+import { Header, GenericButton } from "../components";
 
-function App() {
+function CounterContainer() {
   const [counter, setCounter] = useState(0);
 
   const increment = () => setCounter(counter + 1);
 
   return (
     <section>
-      <section className="header">
-        <h3>Contador</h3>
-      </section>
+      <Header>Contador</Header>
       <section className="content">Clicado {counter}x</section>
       <section className="action">
-        <button type="button" onClick={increment}>
-          Incrementar
-        </button>
+        <GenericButton onClick={increment}>Incrementar</GenericButton>
       </section>
     </section>
   );
 }
 
-export default App;
+export default CounterContainer;
